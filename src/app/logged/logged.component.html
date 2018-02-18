@@ -1,0 +1,30 @@
+<div class="aboutPage accountPage">
+
+    <div class="mainSection">
+        <h1 data-aos="fade-up">
+            <a routerLink="/start">ShipWars</a>
+        </h1>
+
+
+        <div class="content">
+            <div class="container">
+                Hello {{ userLogin }}
+
+                <ul>
+                    <li routerLink="/game">
+                        New game
+                    </li>
+                    <li routerLink="/stats">
+                        Stats
+                    </li>
+
+                    <li (click)="logOut()">
+                        Logout
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+</div>

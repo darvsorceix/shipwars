@@ -1,0 +1,129 @@
+@import '../../assets/variables';
+
+.registerPage {
+  .form-group {
+    margin: 0 0 10px;
+  }
+  label {
+    margin-bottom: 15px;
+  }
+
+  input,
+  input::-webkit-input-placeholder {
+    font-size: 17px;
+    padding-top: 3px;
+  }
+
+  button {
+    top: 10px;
+    position: relative;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    text-align: center;
+    width: 310px;
+    float: right;
+    height: 46px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+  }
+
+  input {
+    font-family: $fontOS;
+    border-radius: 0;
+    padding: 15px 15px;
+    width: 100%;
+    font-size: 17px;
+    color: black;
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .btn-anm {
+    .btn-main {
+      position: absolute;
+      color: #242424;
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased;
+      border-radius: 0;
+      display: block;
+      top: 0;
+      right: 0;
+      border: 1px solid #242424;
+      padding: 12px 42px;
+
+      &:hover {
+        height: 62px;
+        border: none;
+        padding-top: 13px;
+
+        .line-1 {
+          animation: move1 1500ms infinite ease;
+        }
+
+        .line-2 {
+          animation: move2 1500ms infinite ease;
+        }
+
+        .line-3 {
+          animation: move3 1500ms infinite ease;
+        }
+
+        .line-4 {
+          animation: move4 1500ms infinite ease;
+        }
+      }
+    }
+
+    .line-1 {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1px;
+      background-color: #242424;
+      left: 0;
+      bottom: 0;
+    }
+    .line-2 {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 1px;
+      background-color: #242424;
+      left: 0;
+      top: 0;
+    }
+    .line-3 {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1px;
+      background-color: #242424;
+      right: 0;
+      top: 0;
+    }
+    .line-4 {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 1px;
+      background-color: #242424;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+p {
+  font-family: $fontOS;
+  font-size: 14px;
+}
+
+button:disabled,
+button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.76;
+}

@@ -1,0 +1,59 @@
+<div class="aboutPage registerPage">
+    <div class="mainSection">
+
+        <h1 data-aos="fade-up">
+            <a [routerLink]="['/home']">ShipWars</a>
+        </h1>
+
+        <div class="content">
+
+            <div *ngIf="error" class="alert alert-danger">
+                {{ actionResult }}
+            </div>
+
+
+            <div class="container">
+                <form class="form-horizontal" ngNativeValidate>
+
+                    <div class="form-group">
+                        <label for="email" class="cols-sm-2 control-label">Email</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input [(ngModel)]="email" type="email" class="form-control" name="email" id="email"
+                                       placeholder="Email" required/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input [(ngModel)]="password" type="password" class="form-control" name="password"
+                                       id="password" placeholder="Password" required/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button (click)="onSubmit()">
+                            <span class="btn-anm">
+                                <span class="btn-main">
+                                    Sign in
+                                    <span class="line-1"></span>
+                                    <span class="line-2"></span>
+                                    <span class="line-3"></span>
+                                    <span class="line-4"></span>
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+
+                <p>
+                    {{ authKey }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

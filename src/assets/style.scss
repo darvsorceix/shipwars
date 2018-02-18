@@ -1,0 +1,314 @@
+@import 'variables.scss';
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: $fontOS;
+  background: $colorPurple;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: $colorPurple;
+  box-shadow: none;
+}
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+  outline:0;
+  -webkit-appearance:none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+*:focus , input {
+  outline: none;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+a:focus, div:focus {
+  outline: none;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+a, a:hover {
+  color: $colorPurple;
+}
+
+.mainSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: rgba(10, 9, 8, 0.86);
+
+  h1 {
+    text-align: center;
+    font-size: 130px;
+    position: absolute;
+    top: 14%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    color: white;
+    font-family: $fontB;
+
+    @media all and (max-width: 600px) {
+      font-size: 6em;
+    }
+    @media all and (max-width: 400px) {
+      font-size: 4.5em;
+    }
+    a {
+      color: white;
+      transition: 0.4s;
+      letter-spacing: 1px;
+      &:hover {
+        text-decoration: none;
+        transition: 0.4s;
+        letter-spacing: -14px;
+
+        @media all and (max-width: 600px) {
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+  nav ul {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 38%;
+    text-align: center;
+    font-size: 36px;
+    list-style: none;
+    padding: 0;
+    li {
+      margin-bottom: 20px;
+      a, div {
+        color: white;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.btn-cont {
+  text-align: center;
+  .btn {
+    position: relative;
+    width: 208px;
+    height: 60px;
+    padding-top: 14px;
+    border: 1px solid white;
+    border-radius: 0;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-font-smoothing: antialiased;
+    font-size: 21px;
+
+    &:hover {
+      padding-top: 15px;
+      border: none;
+
+      .line-1 {
+        animation: move1 1500ms infinite ease;
+      }
+
+      .line-2 {
+        animation: move2 1500ms infinite ease;
+      }
+
+      .line-3 {
+        animation: move3 1500ms infinite ease;
+      }
+
+      .line-4 {
+        animation: move4 1500ms infinite ease;
+      }
+    }
+  }
+
+  .line-1 {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+  }
+  .line-2 {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    left: 0;
+    top: 0;
+  }
+  .line-3 {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    background-color: white;
+    right: 0;
+    top: 0;
+  }
+  .line-4 {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@keyframes move1 {
+  0% {
+    height: 100%;
+    bottom: 0;
+  }
+  54% {
+    height: 0;
+    bottom: 100%;
+  }
+  55% {
+    height: 0;
+    bottom: 0;
+  }
+  100% {
+    height: 100%;
+    bottom: 0;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    height: 100%;
+    top: 0;
+  }
+  54% {
+    height: 0;
+    top: 100%;
+  }
+  55% {
+    height: 0;
+    top: 0;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+
+@keyframes move4 {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  55% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
+}
+
+.aboutPage {
+  position: relative;
+
+  .content {
+    position: absolute;
+    top: 25%;
+    background: white;
+    color: black;
+    padding: 50px 5%;
+    font-size: 17px;
+    width: 100%;
+
+    @media all and (max-width:1200px) {
+      top:30%;
+    }
+
+    p {
+      margin: 30px 0;
+    }
+  }
+
+  .btn {
+    color: black;
+  }
+
+  .mainSection {
+    background: $colorPurple;
+  }
+
+  h1 {
+    top: 5%;
+  }
+}
+button {
+  cursor: pointer;
+}
+.alert {
+  font-weight: 200;
+  border-radius: 0;
+  a {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.alert-danger {
+  color: #fff;
+  background-color: #b30d07;
+  border-color: #b30d07;
+}
+
+.alert-success {
+  color: white;
+  background-color: #28a745;
+  border-color: transparent;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}

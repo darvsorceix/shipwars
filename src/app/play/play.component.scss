@@ -1,0 +1,56 @@
+.gamePage {
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    margin-bottom: 45px;
+  }
+  table {
+    margin: 20px;
+  }
+
+  p, button, input {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+    margin-bottom: 1em;
+  }
+
+  .gameboard {
+    position: relative;
+    margin: 30px auto;
+    width: 250px;
+    height: 250px;
+    &.disabled {
+      opacity: 0.15;
+      pointer-events: none;
+    }
+  }
+
+  .gameboard {
+    div > div {
+      position: relative;
+      box-sizing: border-box;
+      background: #f6f8f9;
+      border: 1px solid #ddd;
+      width: 50px;
+      height: 50px;
+      float: left;
+      &.hit {
+        background: red;
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+      &.miss {
+        background: gray;
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+    }
+
+  }
+  .content {
+    text-align: center;
+  }
+}
+
+

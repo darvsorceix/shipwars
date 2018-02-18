@@ -1,0 +1,33 @@
+<div class="aboutPage accountPage">
+
+    <div class="mainSection">
+        <h1 data-aos="fade-up">
+            <a routerLink="/start">ShipWars</a>
+        </h1>
+
+
+        <div class="content">
+            <div class="container">
+                Hello {{ userLogin }}
+
+                <ul>
+                    <li>
+                        People in queue: {{ peopleOnline }}
+                    </li>
+
+                    <li>
+                        Your time in queue : {{ result }}
+                    </li>
+                </ul>
+
+                <div class="acceptance" *ngIf="accept">
+                    <button class="btn btn-success" (click)="acceptance()">Accept match</button>
+                </div>
+                <div class="acceptance" *ngIf="wait">
+                    Waiting for second player ...
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

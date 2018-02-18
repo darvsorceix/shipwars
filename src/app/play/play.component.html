@@ -1,0 +1,35 @@
+<div class="aboutPage gamePage">
+
+    <div class="mainSection">
+        <h1 data-aos="fade-up">
+            <a routerLink="/start">ShipWars</a>
+        </h1>
+
+        <div class="content">
+            <div class="container">
+                <h2><strong>{{ userLogin }}</strong> vs <strong>{{ enemy }}</strong></h2>
+
+                <div class="col-sm-12">
+
+                    <span *ngIf="turn && !win && !lost">Your turn</span>
+                    <span *ngIf="!turn && !win && !lost">Wait for your turn</span>
+                    <span *ngIf="win">You won. Congratulation!</span>
+                    <span *ngIf="lost">You lost.</span>
+
+                    <div class="gameboard" (click)="shotToField($event)" [class.disabled]="!turn">
+                        <div *ngFor="let field of array">
+                            <div id="{{ field }}"></div>
+                        </div>
+                    </div>
+
+
+                    <div *ngIf="lost || win">
+                        <a class="btn btn-default" [routerLink]="['/start']">Back to main page</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
